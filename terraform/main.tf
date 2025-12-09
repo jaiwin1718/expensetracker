@@ -2,14 +2,14 @@ provider "aws" {
   region = var.region
 }
 
-resource "aws_s3_bucket" "CI_CD" {
+resource "aws_s3_bucket" "tflogbucket" {
   bucket = var.bucket_name
 }
 
-variable "bucket_name" {}
+variable "bucket" {}
 variable "region" { default = "us-east-1" }
 
-resource "aws_s3_bucket" "demo_bucket" {
+resource "aws_s3_bucket" "tfbucket" {
   bucket = var.bucket_name
 
   tags = {
