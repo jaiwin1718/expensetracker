@@ -2,7 +2,7 @@ provider "aws" {
   region = var.region
 }
 
-resource "aws_s3_bucket" "tflogbucket" {
+resource "aws_s3_bucket" "tflogbucket1718" {
   bucket = var.bucket_name
 }
 
